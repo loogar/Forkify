@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "recipies project",
   "main": "index.js",
+  "homepage": "https://loogar.github.io/Forkify/",
   "scripts": {
     "dev": "webpack --mode development",
-    "built": "webpack --mode production",
+    "build": "webpack --mode production",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "webpack-dev-server --mode development --open"
   },
   "author": "Ragool",
@@ -25,6 +28,7 @@
     "axios": "^0.19.2",
     "babel-polyfill": "^6.26.0",
     "fractional": "^1.0.0",
+    "gh-pages": "^3.1.0",
     "uniqid": "^5.2.0"
   }
 }
